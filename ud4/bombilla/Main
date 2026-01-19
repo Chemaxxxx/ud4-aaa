@@ -1,0 +1,33 @@
+package ud4.bombilla;
+
+public class Main {
+public static void main(String[] args) {
+	Bombilla bombilla1 = new Bombilla(true);
+	Bombilla bombilla2 = new Bombilla(false);
+	Bombilla bombilla3 = new Bombilla(true);
+	Bombilla bombilla4 = new Bombilla(false);
+	
+	System.out.println("--PRUEBA GENERAL--");
+	bombilla1.getEstado();
+	bombilla4.getEstado();
+	bombilla3.getEstado();
+	bombilla2.getEstado();
+	//APAGADO DE LOS PLOMOS
+	Bombilla.apagaPlomos();
+	bombilla1.encender();
+	
+	System.out.println("--PRUEBA CON LOS PLOMOS APAGADOS--");
+	bombilla1.getEstado();
+	bombilla4.getEstado();
+	bombilla3.getEstado();
+	bombilla2.getEstado();
+	//REPARACIÓN DE LOS PLOMOS
+	Bombilla.reparaPlomos();
+	
+	System.out.println("--PRUEBA CON LOS PLOMOS REPARADOS--");
+	bombilla1.getEstado();
+	bombilla4.getEstado();
+	bombilla3.getEstado();
+	bombilla2.getEstado();
+	}
+}
