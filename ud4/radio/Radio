@@ -1,0 +1,30 @@
+package emisora;
+
+public class Emisora {
+
+	private double frecuencia;
+	private static double salto = 0.5;
+	private static double  maxima = 108.0;
+	private static double minima = 80.0; 
+	
+	Emisora(){
+		this.frecuencia = minima;
+	}
+	
+	public void up() {
+		this.frecuencia += salto;
+		if(this.frecuencia > maxima)
+			this.frecuencia = minima;
+	}
+	
+	public void down() {
+		this.frecuencia -= salto;
+		if(this.frecuencia < minima)
+			this.frecuencia = maxima;
+	}
+	
+	public double display() {
+		System.out.println("Sintonizando emisora...");
+		return this.frecuencia;
+	}
+}
