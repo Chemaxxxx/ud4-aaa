@@ -1,0 +1,42 @@
+package ud4.bombilla;
+
+public class Bombilla {
+
+	private static  boolean plomos = true;
+	private boolean encendida;
+	
+	Bombilla(boolean estado){
+		this.encendida = estado;
+	}
+	
+	public void encender() {
+		if(!plomos)
+			System.out.println("No se puede encender la luz!! repara los plomos primero");
+		else {
+			encendida = true;
+			System.out.println("encendiendo bombilla...");
+		}
+	}
+	
+	public void apagar() {
+		encendida = false;
+		System.out.println("apagando bombilla...");
+	}
+	
+	public static void reparaPlomos() {
+		plomos = true;
+		System.out.println("Reparando plomos...");
+	}
+	
+	public static void apagaPlomos() {
+		plomos = false;
+		System.out.println("Plomos fundidos");
+	}
+	
+	public void getEstado() {
+		if(encendida && plomos)
+			System.out.println("La bombilla esta encendida");
+		else
+			System.out.println("Las bombilla esta apagada");
+	}
+}
