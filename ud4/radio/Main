@@ -1,0 +1,16 @@
+package emisora;
+
+public class Main {
+public static void main(String[] args) {
+	Emisora Emisora1= new Emisora();
+	System.out.println(Emisora1.display());
+	Emisora1.down(); //LA FRECUENCIA DEBE CAMBIAR A 180
+	System.out.println(Emisora1.display());
+	Emisora1.up(); //LA FRECUENCIA DEBE VOLVER A 80
+	System.out.println(Emisora1.display());
+	Emisora1.up();
+	Emisora1.up();
+	Emisora1.up(); //DESPUES DE 3 SUBIDAS, LA FRECUENCIA DEBE SER DE 81.5
+	System.out.println(Emisora1.display());
+	}
+}
